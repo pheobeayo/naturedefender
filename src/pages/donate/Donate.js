@@ -7,8 +7,6 @@ import {
     BarWrapper,
     SummaryContainer1,
     SummaryContainer2,
-    Button,
-    ButtonContainer,
     TextContainer,
     EstimateContainer,
     InputContainer
@@ -17,13 +15,10 @@ import Subfooter from "../../components/subfooter/Subfooter";
 import Navbar from "../../components/navbar/Navbar";
 import { Wrapper } from "../project-creation/project.creation.styles";
 import rhinotwo from "../../assets/rhinotwo.png";
-import { Link } from "react-router-dom";
-import 'sweetalert2/dist/sweetalert2.css';
-import Swal from 'sweetalert2';
 import Checkbox from "../../components/checkbox/Checkbox";
 import FormTextInput from "../../components/custom-input/FormTextInput";
-import { useContractRead } from 'wagmi';
-import naturedefenderABI from "../../contract/naturedefender.json";
+import {getDonor} from "../../components/contracts/call";
+
 
 
 
@@ -45,44 +40,8 @@ const Donate = () => {
     const onChange = () => {
         setChecked(!checked);
     };
-    const [donate, setDonate] = useState('');
-
-    const Donate = (donate) => {
-        if (!donate) {
-            Swal.fire({
-                position: 'center',
-                icon: 'success',
-                fontWeight: 'bold',
-                title: 'You have successfully donated',
-                text: 'Congratulations! You have successfully donated to support HornShield😊',
-                background: "#110A03",
-                confirmButtonColor: '#B98D63',
-                confirmButtonText: 'Claim your Badge reward',
-                // showConfirmButton: false,
-                timer: 2500
-            });
-
-            setDonate(donate);
-        } else {
-            Swal.fire({
-                position: 'center',
-                icon: 'danger',
-                title: 'You have already donated',
-                text: 'Thank you for donating.',
-                background: "#110A03",
-                confirmButtonColor: '#B98D63',
-                confirmButtonText: 'OK',
-                timer: 2000
-            });
-        }
-    };
-    const {  isLoading } = useContractRead({
-        address: '0x8e0F543B4fdAAE2030427db92e47FFc9F695633F',
-        abi: naturedefenderABI,
-        functionName: 'naturedefender',
-    });
-
-
+    
+   
 
     return (
 
@@ -138,14 +97,10 @@ const Donate = () => {
                             onChange={onChange}
                         />
                     </SummaryContainer2>
-                    <ButtonContainer>
-                        <Button onClick={() => Donate('donate')}
-                            className={donate === 'donate' ? 'bg-gray-300 cursor-not-allowed' : '#B98D63'}>
-                            <Link style={{ textDecoration: 'none', color: 'white' }}>Donate</Link>
-                            {isLoading ? 'Donating...' : 'Donate'}
-                        </Button>
+                    <button type='submit' className='w-full px-8 py-2 mb-2 font-semibold rounded-lg text-white bg-[#DA8450] hover:bg-[#1A1818]'
+                            onClick={() => getDonor()}>Create Project</button>
                        
-                    </ButtonContainer>
+                   
 
                     <SubfooterWrapper>
                         <Subfooter />
