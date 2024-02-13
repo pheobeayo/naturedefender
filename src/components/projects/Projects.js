@@ -1,13 +1,4 @@
 import React from "react";
-import {
-    ProjectsParent,
-    ProjectsWrapper,
-    Header,
-    SummaryContainer1,
-    SummaryContainer2,
-    Button,
-    ButtonContainer
-} from "./projects.styles";
 import arrow from "../../assets/arrow.png";
 import tusk from "../../assets/tusk.png";
 import horn from "../../assets/horn.png";
@@ -26,33 +17,31 @@ const Projects = () => {
 
 
     return (
-        <ProjectsParent>
-            <ProjectsWrapper>
-                <Header><h2>Ongoing Conservation Projects</h2>
-                    <img src={arrow} alt="arrow" />
-                </Header>
-
-                <SummaryContainer1>
-                    <Link to='/project-details'><img src={horn} alt="horn" /></Link>
-                    <img src={roar} alt="roar"/>
-                    <img src={tusk} alt="tusk" />
-                </SummaryContainer1>
-                <SummaryContainer2>
-                    <img src={pride} alt="pride" />
-                    <img src={bark} alt="bark" />
-                    <img src={speed} alt="speed" />
-                </SummaryContainer2>
-                <ButtonContainer>
-                    <Button>
-                        <Link  style={{ textDecoration: 'none', color: 'white' }}>Explore more Projects</Link>
-                    </Button>
-                </ButtonContainer>
-            </ProjectsWrapper>
+        <section>
+            <h2 class='text-white text-4xl mx-96 font-bold'>Ongoing Conservation Projects</h2>
+                <img src={arrow} alt="arrow" class='mx-96 px-40'/>
+            
 
 
+            <div className="grid-cols-4 gap-4 md:flex md:flex-row mx-8 mt-2">
+                <Link to='/project-details'><img src={horn} alt="horn" /></Link>
+                <img src={roar} alt="roar" />
+                <img src={tusk} alt="tusk" />
+            </div>
 
-        </ProjectsParent>
+            <div className="grid-cols-4 gap-4 md:flex md:flex-row mx-8 mt-2">
+                <img src={pride} alt="pride" />
+                <img src={bark} alt="bark" />
+                <img src={speed} alt="speed" />
+            </div>
+            <div class='mx-96 px-36 mt-2'>
+                <Link to='/' style={{ textDecoration: 'none', color: 'white' }} ><button class="bg-[#DA8450] hover:bg-[#1A1818] text-white font-semibold py-2  border-white w-40 h-10 rounded">Explore more Projects</button></Link>
 
+            </div>
+
+
+
+        </section>
 
 
 

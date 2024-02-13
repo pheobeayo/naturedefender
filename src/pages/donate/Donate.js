@@ -1,19 +1,14 @@
 import React, { useState } from "react";
 import {
-    DonateParent,
-    DonateWrapper,
+    
     Header,
-    SubfooterWrapper,
-    BarWrapper,
+    
     SummaryContainer1,
     SummaryContainer2,
     TextContainer,
     EstimateContainer,
     InputContainer
 } from "./donate.styles";
-import Subfooter from "../../components/subfooter/Subfooter";
-import Navbar from "../../components/navbar/Navbar";
-import { Wrapper } from "../project-creation/project.creation.styles";
 import rhinotwo from "../../assets/rhinotwo.png";
 import Checkbox from "../../components/checkbox/Checkbox";
 import FormTextInput from "../../components/custom-input/FormTextInput";
@@ -46,12 +41,10 @@ const Donate = () => {
     return (
 
 
-        <DonateParent>
-            <DonateWrapper>
-                <BarWrapper>
-                    <Navbar />
-                </BarWrapper>
-                <Wrapper>
+      
+            <main class='bg-[#1A1818]'>
+               
+                
                     <img src={rhinotwo} alt="rhinotwo" style={{ marginLeft: '4rem', marginTop: '4rem' }} />
                     <Header><h2>Donate</h2>
 
@@ -101,16 +94,10 @@ const Donate = () => {
                             onClick={() => getDonor()}>Create Project</button>
                        
                    
-
-                    <SubfooterWrapper>
-                        <Subfooter />
-                    </SubfooterWrapper>
-                </Wrapper>
-            </DonateWrapper>
-
-
-
-        </DonateParent>
+                       </main>
+                    
+          
+        
 
 
 

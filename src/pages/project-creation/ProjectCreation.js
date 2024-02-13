@@ -1,17 +1,5 @@
 import React from "react";
-import {
-    CreationParent,
-    CreationWrapper,
-    SubfooterWrapper,
-    Wrapper,
-    FormHeader,
-    BarWrapper
-} from "./project.creation.styles";
-import Subfooter from "../../components/subfooter/Subfooter";
-import Navbar from "../../components/navbar/Navbar";
 import arrow from "../../assets/arrow.png";
-import FormButton from "../../components/custom-button/FormButton";
-import FormTextInput from "../../components/custom-input/FormTextInput";
 import { useNavigate } from "react-router-dom";
 
 
@@ -29,106 +17,94 @@ const ProjectCreation = () => {
 
 
     return (
-        <CreationParent>
-            <CreationWrapper>
-                <BarWrapper>
-                    <Navbar />
-                </BarWrapper>
-                <Wrapper>
+        <main className="bg-[#1A1818] w-screen">
 
-                    <FormHeader>
-                        <h3>PROJECT CREATION</h3>
+            
+            <section class='w-[90%] md:w-[80%] mx-auto py-10'>
+                <form class='mt-40 w-3/4 mx-28'>
+                    <h1 className="text-[30px] md:text-[34px] font-bold text-white mx-40">
+                    PROJECT CREATION{" "}
+                    </h1>
+                    <img src={arrow} alt="arrow" class='mx-72' />
+                    <p class='text-white mx-32'>This form section is to get details about the project creator</p>
 
-                        <img src={arrow} alt="arrow" />
-                        <p>Create a new project by filling out the form below</p>
-                    </FormHeader>
-                    <form>
+                    <div class="mb-1">
+                        <label class="block text-white text-sm font-bold mb-2" for="companyName">
+                            Company name
+                        </label>
+                        <input class="bg-[#1A1818] border-[#fff] border-2 rounded w-full py-2 px-3 text-[#fff] leading-tight focus:outline-none focus:shadow-outline" id="companyName" type="text" placeholder="Add your company’s name and description" required></input>
+                    </div>
+                    <div class="mb-1">
+                        <label class="block text-white text-sm font-bold mb-2" for="companyLocation">
+                        Company Location
+                        </label>
+                        <input class="bg-[#1A1818] border-[#fff] border-2 rounded w-full py-2 px-3 text-[#fff] leading-tight focus:outline-none focus:shadow-outline" id="companyLocation" type="text" placeholder="Add your company’s location" required></input>
+                    </div>
+                    <div class="mb-1">
+                        <label class="block text-white text-sm font-bold mb-2" for="contactInformation">
+                            Contact Information
+                        </label>
+                        <input class="bg-[#1A1818] border-[#fff] border-2 rounded w-full py-2 px-3 text-[#fff] leading-tight focus:outline-none focus:shadow-outline" id="contactInformation" type="text" placeholder="Add your contact information, email, phone number and social media links" required></input>
+                    </div>
 
+                    <div class="mb-1">
+                        <label class="block text-white text-sm font-bold mb-2" for="teamBackground">
+                            Team background
+                        </label>
+                        <input class="bg-[#1A1818] border-[#fff] border-2 rounded w-full py-2 px-3 text-[#fff] leading-tight focus:outline-none focus:shadow-outline" id="teamBackground" type="text" placeholder="Brief description of the team background, their qualification and experience" required></input>
+                    </div>
+                    <div class="mb-1">
+                        <label class="block text-white text-sm font-bold mb-2" for="projectTitle">
+                        Project Title
+                        </label>
+                        <input class="bg-[#1A1818] border-[#fff] border-2 rounded w-full py-2 px-3 text-[#fff] leading-tight focus:outline-none focus:shadow-outline" id="projectTitle" type="text" placeholder="A catchy and descriptive name for your project" required></input>
+                    </div>
+                    <div class="mb-1">
+                        <label class="block text-white text-sm font-bold mb-2" for="projectDescription">
+                        Project Description
+                        </label>
+                        <input class="bg-[#1A1818] border-[#fff] border-2 rounded w-full py-2 px-3 text-[#fff] leading-tight focus:outline-none focus:shadow-outline" id="projectDescription" type="text" placeholder="Detail explanation of your project and other necessary description" required></input>
+                    </div>
+                    <div class="mb-1">
+                        <label class="block text-white text-sm font-bold mb-2" for="projectImpact">
+                        Project Impact
+                        </label>
+                        <input class="bg-[#1A1818] border-[#fff] border-2 rounded w-full py-2 px-3 text-[#fff] leading-tight focus:outline-none focus:shadow-outline" id="projectImpact" type="text" placeholder="Explain how you will contribute to the betterment of society" required></input>
+                    </div>
+                    <div class="mb-1">
+                        <label class="block text-white text-sm font-bold mb-2" for="preventiveMeasures">
+                        Preventive measures
+                        </label>
+                        <input class="bg-[#1A1818] border-[#fff] border-2 rounded w-full py-2 px-3 text-[#fff] leading-tight focus:outline-none focus:shadow-outline" id="preventiveMeasures" type="text" placeholder="The preventive measures you will put in place to secure the animals" required></input>
+                    </div>
+                    <div class="mb-1">
+                        <label class="block text-white text-sm font-bold mb-2" for="habitationRestoration">
+                        Habitation Restoration
+                        </label>
+                        <input class="bg-[#1A1818] border-[#fff] border-2 rounded w-full py-2 px-3 text-[#fff] leading-tight focus:outline-none focus:shadow-outline" id="habitationRestoration" type="text" placeholder="Provide an explanation of the habitat restoration project" required></input>
+                    </div>
+                    <div class='mb-1'>
+                        <label class="text-sm font-medium text-white block mb-2" for="user_avatar">Add a Picture </label>
+                        <input class="block w-full cursor-pointer bg-[#1A1818] border-[#fff] border-solid border-2  text-[#fff] focus:outline-none focus:border-black  text-sm rounded-lg" aria-describedby="file_upload" id="file_upload" type="file" placeholder='Add a picture' required />
+                    </div>
 
-                        <FormTextInput
-                            labelName="Company name"
-                            placeholder="Add your company’s name and description"
-                            name="companyName"
+                    
 
-                        />
-                        <FormTextInput
-                            labelName="Company Location"
-                            placeholder="Add your company’s location"
-                            name="companyLocation"
-
-                        />
-                        <FormTextInput
-                            labelName="Contact Information"
-                            placeholder="Add your contact information, email, phone number and social media links"
-                            name="contactInformation"
-
-                        />
-
-                        <FormTextInput
-                            labelName="Team background"
-                            placeholder="Brief description of the team background, their qualification and experience"
-                            name="teamBackground"
-
-                        />
-                        <FormTextInput
-                            labelName="Project Title"
-                            placeholder="A catchy and descriptive name for your project"
-                            name="projectTitle"
-
-                        />
-                        <FormTextInput
-                            labelName="Project Description"
-                            placeholder="Detail explanation of your project and other necessary description"
-                            name="projectDescription"
-
-                        />
-                        <FormTextInput
-                            labelName="Project Impact"
-                            placeholder="Explain how you will contribute to the betterment of society."
-                            name="projectImpact"
-
-                        />
-                        <FormTextInput
-                            labelName="Preventive measures"
-                            placeholder="The preventive measures you will put in place to secure the animals"
-                            name="preventiveMeasures"
-                            height="5rem"
-
-                        />
-                        <FormTextInput
-                            labelName="Habitation Restoration"
-                            placeholder="Provide an explanation of the habitat restoration project"
-                            name="habitationRestoration"
-
-                        />
-
-                        <div class="flex flex-col items-start justify-center w-3/4">
-                            <label class="block mb-3 text-sm font-medium text-white dark:text-white" for="file_input">Add a Picture</label>
-                            <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-[#1A1818] dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="file_input_help" id="file_input" type="file" />
-                            <p class="mt-1 text-sm text-white dark:text-gray-300" id="file_input_help">SVG, PNG, JPG or GIF (MAX. 800x400px).</p>
-                        </div>
-
-                        <FormButton
-                            text="Continue"
-                            color="#ffffff"
-                            borderColor="#DA8450"
-                            backgroundColor={"#DA8450"}
-                            handleClick={routeToNextPage}
-
-                        />
+                    <button type='submit' className='w-full px-8 py-2 mb-2 font-semibold rounded-lg text-white bg-[#DA8450] hover:bg-[#1A1818]'
+                        handleClick={routeToNextPage}>Continue</button>
 
 
 
 
-                    </form>
+
+                </form>
+
+            </section>
+
+            
 
 
-                    <SubfooterWrapper>
-                        <Subfooter />
-                    </SubfooterWrapper>
-                </Wrapper>
-            </CreationWrapper>
-        </CreationParent>
+        </main>
 
     );
 };

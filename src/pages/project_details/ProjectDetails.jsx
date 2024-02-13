@@ -8,10 +8,8 @@ import andersonImg from '../../assets/anderson.svg';
 import incentiveImg from '../../assets/incentives.png';
 import updateImg from '../../assets/updates.svg';
 import padlockImg from '../../assets/padlocks.svg';
-import Navbar from '../../components/navbar/Navbar';
 import rhinotwo from "../../assets/rhinotwo.png";
 import hornImage from "../../assets/hornImage.svg";
-import Subfooter from '../../components/subfooter/Subfooter';
 import {Link} from 'react-router-dom';
 
 
@@ -55,7 +53,7 @@ const ProjectDetails = () => {
     <>
       <main className='bg-[#1A1818]'>
         <section className='w-[90%] md:w-[80%] mx-auto py-10'>
-         <Navbar/>
+        
          <div class="flex flex-col md:flex-col justify-center">
          <h1 className="title-font sm:text-2xl text-3xl mb-4 font-medium text-white">
           Hornshield
@@ -156,9 +154,7 @@ const ProjectDetails = () => {
               {project}
             </div>
           ))}
-          <div class="flex flex-col md:flex-row justify-center">
-          <Subfooter/>
-         </div>
+         
         </section>
           
       </main>
