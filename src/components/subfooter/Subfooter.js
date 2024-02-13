@@ -1,69 +1,59 @@
-import React from "react";
-import {
-  ProductDiv,
-  ResourcesDiv,
-  SubcenterWrapper,
-  ConnectDiv,
-  SubfooterParent,
-  LogoContainer,
-  OthersContainer,
-  CompanyDiv,
-  SocialDiv
-} from "./subfooter.styles";
+import { FaTwitter } from "react-icons/fa";
+import { SiDiscord } from "react-icons/si";
+import { HiOutlineMail } from "react-icons/hi";
 import logo from "../../assets/logo.png";
-import twitter from "../../assets/twitter.png";
-import discord from "../../assets/discord.png";
-import mail from "../../assets/mail.png";
 
-
-const Subfooter = () => {
+function Subfooter() {
   return (
+    <div className="px-[30px] md:px-[100px] py-[60px]
+    bg-[#1A1818] grid grid-cols-1 md:flex md:flex-row gap-4">
+      <div className="md:flex flex-wrap md:flex-row justify-between w-full">
 
-    <SubfooterParent>
-      <SubcenterWrapper>
-        
-          <OthersContainer>
-        <ProductDiv>
-          <h1>Product</h1>
-          <p><br></br>Features
-          <br></br>Workload
-          <br></br>Time</p>
+        <div className="md:flex justify-center items-start md:gap-[100px]">
+          <div className="flex flex-row gap-[100px]">
+            <div className="pt-[20px] sm:pt-0 flex flex-col gap-7">
+              <p className="text-gray-50 text-[25px] md:text-[40px] font-semibold">Product</p>
+              <p className="text-gray-50 text-[10px] md:text-[20px] font-normal">Features</p>
+              <p className="text-gray-50 text-[10px] md:text-[20px] font-normal">Workload</p>
+              <p className="text-gray-50 text-[10px] md:text-[20px] font-normal">Time</p>
 
-        </ProductDiv>
-        <CompanyDiv>
-            <h1>Company</h1>
-            <p><br></br>Real Work
-            <br></br>About & Contact
-            <br></br>Careers</p>
-        </CompanyDiv>
-        <ResourcesDiv>
-          <h1>Resources</h1>
-         <p> <br></br>Blog
-          <br></br>Help & About
-          <br></br>Customer</p>
+            </div>
 
-        </ResourcesDiv>
-        <ConnectDiv>
-        <LogoContainer>
-            <img src={logo} alt="logo"  width={50}/>
-            <h2>NatureDefenders</h2>
-           
-          </LogoContainer>
-        <h6>Shaping a Sustainable World</h6>
-          <SocialDiv>
-        <img src ={twitter} alt="twitter"/>
-         <img src={discord} alt="discord"/>
-         <img src={mail} alt="discord"/>
-         </SocialDiv>
-          
-        </ConnectDiv>
-        </OthersContainer>
-      </SubcenterWrapper>
-    </SubfooterParent>
-  )
+            <div className="pt-[20px] sm:pt-0 flex flex-col gap-7">
+              <p className="text-gray-50 text-[25px] md:text-[40px] font-semibold">Company</p>
+              <p className="text-gray-50 text-[10px] md:text-[20px] font-normal">Real Work</p>
+              <p className="text-gray-50 text-[10px] md:text-[20px] font-normal">About & Contact</p>
+              <p className="text-gray-50 text-[10px] md:text-[20px] font-normal">Careers</p>
 
+            </div>
+          </div>
 
+          <div className="pt-[20px] sm:pt-0 flex flex-col gap-7">
+            <p className="text-gray-50 text-[25px] md:text-[40px] font-semibold">Resources</p>
+            <p className="text-gray-50 text-[10px] md:text-[20px] font-normal">Blog</p>
+            <p className="text-gray-50 text-[10px] md:text-[20px] font-normal">Help & About</p>
+            <p className="text-gray-50 text-[10px] md:text-[20px] font-normal">Customer</p>
+          </div>
 
+          <div className="md:w-[519px] pb-[60px] md:h-[88px] my-[40px]  md:mt-[20px]">
+            <div className="flex flex-row items-center gap-4">
+              <img src={logo} alt='logo' />
+
+            </div>
+
+            <p className="text-opacity-90 py-[15px] text-white text-[10px] md:text-[18px]/[26px] font-normal">
+              Shaping a Sustainable World
+            </p>
+            <div className="flex flex-row cursor-pointer space-x-5 text-white">
+              <FaTwitter />
+              <SiDiscord />
+              <HiOutlineMail />
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
-
 export default Subfooter;
