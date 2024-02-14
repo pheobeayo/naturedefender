@@ -17,9 +17,10 @@ const Projects = () => {
 
 
     return (
-        <section>
+        <section className='bg-[#1A1818]'>
+            
             <h2 class='text-white text-4xl mx-96 font-bold'>Ongoing Conservation Projects</h2>
-                <img src={arrow} alt="arrow" class='mx-96 px-40'/>
+                <img src={arrow} alt="arrow" class='mx-96 px-48'/>
             
 
 
@@ -39,7 +40,7 @@ const Projects = () => {
 
             </div>
 
-
+          
 
         </section>
 

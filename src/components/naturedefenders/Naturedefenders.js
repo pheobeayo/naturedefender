@@ -16,10 +16,10 @@ const Naturedefenders = () => {
 
                 <div className="container mx-auto px-4 sm:px-[80px] py-[100px]">
 
-                    <h2 className="text-white text-4xl pb-[48px] font-bold leading-10 md:mx-96">
+                    <h2 className="text-white text-3xl font-bold leading-10 md:mx-96">
                         Why NatureDefenders?
                     </h2>
-                    <img src={arrow} alt="arrow" class='mx-96' />
+                    <img src={arrow} alt="arrow" class='mx-96 px-36' />
 
                     <div className='bg-[#1A1818] grid-cols-4 gap-4 md:flex md:flex-row'>
                         <div

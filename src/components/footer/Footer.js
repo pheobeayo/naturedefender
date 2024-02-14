@@ -5,7 +5,7 @@ import Subscriber from "../subscribe/Subscribe";
 const Footer = () => {
   return (
     <div className="bg-[#1A1818]">
-      <div className="container mx-auto sm:px-[80px] pb-[100px]">
+      <div className="container mx-auto sm:px-[80px] pb-[100px] mt-16">
      
       <h2 className="text-white text-xl sm:text-3xl font-bold leading-10 mt-4">
         Subscribe to our mailing list
